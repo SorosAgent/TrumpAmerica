@@ -1,13 +1,13 @@
-title: Wladimir Woytinsky
+title: Elizabeth Warren
 is-pinned-card: true
 tags: advisor, labor
 card-image: img/portraits/WoytinskyWladimir.jpg
 view-if: woytinsky_advisor = 1
 new-page: true 
 
-= Wladimir Woytinsky
+= Elizabeth Warren
 
-Wladimir Woytinsky is a Russian Menshevik in exile, and the chief economist of the socialist trade union federation. His primary idea is to use massive government spending as a way of stimulating demand to extricate us from the depression.
+Elizabeth Warren is a progressive Senator from Massachusetts.
 
 - @plan
 - @carry_out_policy
@@ -15,8 +15,8 @@ Wladimir Woytinsky is a Russian Menshevik in exile, and the chief economist of t
 - @root: Return to main
 
 @plan
-title: Adopt the WTB-plan!
-subtitle: Convincing the rest of the party to support the WTB-plan.
+title: Adopt the Social Democratic plan!
+subtitle: Convincing the rest of the party to support the Social Democratic plan.
 choose-if: advisor_action_timer <= 0 and wtb_adopted == 0 and wtb_support >= 3 and black_thursday_seen and (not historical_mode or ((labor_strength >= center_strength) and (labor_strength >= left_strength) and (labor_strength >= reformist_strength)))
 on-arrival: advisor_action_timer = 6;
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if black_thursday_seen == 0 : We are not currently in an economic crisis. ?][? if wtb_adopted > 0 : We have already adopted the WTB-Plan. ?][? if wtb_support < 3 : There is not enough support for the WTB-Plan. ?][? if (labor_strength < center_strength or labor_strength < left_strength or labor_strength < reformist_strength) and historical_mode : The labor faction is not strong enough. ?]
@@ -32,10 +32,10 @@ go-to: economic_policy
 
 
 @depression
-title: Addressing the economic crisis
-subtitle: Formulate a plan to get us out of the economic crisis.
+title: Addressing the COVID-19 recession.
+subtitle: Formulate a plan to get us out of the recession.
 choose-if: advisor_action_timer <= 0 and wtb_adopted == 0 and black_thursday_seen == 1 and wtb_support <= 3
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if black_thursday_seen == 0 : We are not currently in an economic crisis. ?][? if wtb_adopted > 0 : We have already adopted the WTB-Plan. ?]
 on-arrival: advisor_action_timer = 6; wtb_support += 2; center_dissent += 10; labor_strength += 1
 
-The WTB-plan, named for its primary supporters Woytinsky, Tarnow, and Baade, has been adopted as the unions' plan for getting us out of the depression. Woytinsky canvasses in favor of this policy through the SPD and the unions.
+Elizabeth Warren advocates for a New Deal-esque economic plan amongst her colleagues.
